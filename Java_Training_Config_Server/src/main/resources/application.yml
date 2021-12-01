@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: local
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/dTankari/spring-config-server
+          search-paths: server-config/
+        native:
+          search-locations: classpath:offline-repository/
+server:
+  # config server port
+  port: 8088
